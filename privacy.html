@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integritetspolicy — DS Dynamics</title>
+  <meta name="description" content="Integritetspolicy för DS Dynamics. Läs om hur vi hanterar dina uppgifter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>✨</text></svg>">
+  <style>
+    .policy { padding: 80px 0; }
+    .policy h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .policy .updated { font-size: 14px; color: var(--text-muted); margin-bottom: 48px; }
+    .policy h2 { font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 12px; }
+    .policy p, .policy li { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
+    .policy ul { padding-left: 24px; margin-bottom: 16px; }
+    .policy a { color: var(--primary); text-decoration: none; }
+    .policy a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 32px; font-size: 14px; color: var(--text-muted); text-decoration: none; }
+    .back-link:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <section class="policy">
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Tillbaka till startsidan</a>
+      <h1>Integritetspolicy</h1>
+      <p class="updated">Senast uppdaterad: 26 mars 2026</p>
+
+      <p>
+        DS Dynamics ("appen", "vi", "oss") utvecklas och drivs av itfokus Sweden AB (org.nr 559XXX-XXXX).
+        Vi tar din integritet på allvar. Denna policy beskriver vilka uppgifter vi samlar in,
+        varför vi gör det och hur de skyddas.
+      </p>
+
+      <h2>1. Vilka uppgifter samlar vi in?</h2>
+      <p>DS Dynamics samlar in följande data som du själv matar in i appen:</p>
+      <ul>
+        <li><strong>Parkopplingsdata</strong> — ett anonymt enhets-ID och en 6-siffrig parkopplingskod</li>
+        <li><strong>Regler och uppgifter</strong> — titlar, beskrivningar, kategorier och status</li>
+        <li><strong>Check-in-data</strong> — humör, stressnivå, trygghetsnivå och valfria anteckningar</li>
+        <li><strong>Samtyckeslogg</strong> — överenskommelser, gränser och önskemål ni dokumenterar</li>
+        <li><strong>Poäng och belöningar</strong> — transaktioner, belöningar och konsekvenser</li>
+        <li><strong>Livsstyrningslogg</strong> — mat, vatten, träning, sömn och andra dagliga loggar</li>
+        <li><strong>Cykelspårning</strong> — mensdata, symtom och flödesnivå (valfritt, opt-in)</li>
+        <li><strong>Bilder</strong> — fotobilder bifogade som bevis på uppgifter (lagras enbart lokalt på din enhet)</li>
+      </ul>
+
+      <h2>2. Hur används uppgifterna?</h2>
+      <p>Dina uppgifter används <strong>enbart</strong> för att:</p>
+      <ul>
+        <li>Synkronisera data i realtid mellan dig och din parkopplade partner</li>
+        <li>Visa information i appen (regler, uppgifter, check-ins etc.)</li>
+      </ul>
+      <p>
+        Vi använder <strong>inte</strong> dina uppgifter för marknadsföring, reklam, analys,
+        profilering eller försäljning till tredje part. Vi gör inga nätverksanrop utöver
+        datasynkroniseringen mellan parkopplade enheter.
+      </p>
+
+      <h2>3. Var lagras uppgifterna?</h2>
+      <p>
+        Appdata lagras i <strong>Supabase</strong> (molntjänst med servrar inom EU/EES).
+        Kommunikation mellan appen och servern sker via krypterad HTTPS-anslutning.
+      </p>
+      <p>
+        Bilder (bildbevis på uppgifter) lagras <strong>enbart lokalt</strong> på din enhet
+        och skickas aldrig till någon server.
+      </p>
+      <p>
+        Row Level Security (RLS) säkerställer att varje enhet bara kan läsa och skriva
+        data som tillhör det egna paret. Ingen annan användare kan se era uppgifter.
+      </p>
+
+      <h2>4. Autentisering</h2>
+      <p>
+        Appen använder anonym autentisering — du behöver inte ange namn, e-postadress
+        eller lösenord. Varje enhet får ett unikt, slumpmässigt genererat ID som inte
+        kan kopplas till din identitet.
+      </p>
+
+      <h2>5. Delning av uppgifter</h2>
+      <p>
+        Dina uppgifter delas <strong>enbart med din parkopplade partner</strong>.
+        Vi säljer, delar eller överför aldrig uppgifter till tredje part, med undantag för:
+      </p>
+      <ul>
+        <li>Om det krävs enligt lag (t.ex. vid domstolsbeslut)</li>
+        <li>Supabase som teknisk underleverantör för datalagring (under databehandlingsavtal)</li>
+      </ul>
+
+      <h2>6. Känsliga uppgifter</h2>
+      <p>
+        DS Dynamics kan innehålla känsliga personuppgifter såsom hälsodata
+        (menscykelspårning, hälsostatus). Dessa funktioner är <strong>valfria</strong>
+        och aktiveras bara om du själv väljer det. Hälsodata behandlas med samma
+        säkerhetsnivå som övrig data och delas enbart med din partner.
+      </p>
+
+      <h2>7. Dina rättigheter (GDPR)</h2>
+      <p>Enligt dataskyddsförordningen (GDPR) har du rätt att:</p>
+      <ul>
+        <li><strong>Få tillgång</strong> till dina uppgifter</li>
+        <li><strong>Rätta</strong> felaktiga uppgifter</li>
+        <li><strong>Radera</strong> dina uppgifter ("rätten att bli glömd")</li>
+        <li><strong>Begränsa</strong> behandlingen av dina uppgifter</li>
+        <li><strong>Invända</strong> mot behandling</li>
+        <li><strong>Dataportabilitet</strong> — få ut dina uppgifter i ett maskinläsbart format</li>
+      </ul>
+      <p>
+        För att utöva dina rättigheter, kontakta oss på
+        <a href="mailto:privacy@itfokus.se">privacy@itfokus.se</a>.
+        Vi svarar inom 30 dagar.
+      </p>
+
+      <h2>8. Radering av konto och data</h2>
+      <p>
+        Du kan när som helst lämna parkopplingen i appen (Inställningar → Lämna par).
+        Detta tar bort din koppling till paret. Om du vill att all din data raderas
+        permanent, kontakta <a href="mailto:privacy@itfokus.se">privacy@itfokus.se</a>.
+      </p>
+
+      <h2>9. Barn</h2>
+      <p>
+        DS Dynamics riktar sig inte till personer under 17 år. Vi samlar inte
+        medvetet in uppgifter från barn.
+      </p>
+
+      <h2>10. Cookies och spårning</h2>
+      <p>
+        Appen använder <strong>inga cookies, ingen analys, ingen spårning</strong>
+        och inga tredjepartsscript. Denna webbplats använder inga cookies.
+      </p>
+
+      <h2>11. Ändringar i policyn</h2>
+      <p>
+        Vi kan uppdatera denna policy. Väsentliga ändringar meddelas i appen.
+        Senaste versionen finns alltid på denna sida.
+      </p>
+
+      <h2>12. Kontakt</h2>
+      <p>
+        <strong>itfokus Sweden AB</strong><br>
+        E-post: <a href="mailto:privacy@itfokus.se">privacy@itfokus.se</a><br>
+        Webbplats: <a href="index.html">dsdynamics.se</a>
+      </p>
+      <p>
+        Du har även rätt att lämna klagomål till
+        <strong>Integritetsskyddsmyndigheten (IMY)</strong>, imy.se.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 DS Dynamics</p>
+      <p class="footer-sub">itfokus Sweden AB</p>
+    </div>
+  </footer>
+
+</body>
+</html>
