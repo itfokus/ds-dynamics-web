@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radera dina uppgifter — DS Dynamics</title>
+  <meta name="description" content="Så här raderar du dina uppgifter från DS Dynamics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>✨</text></svg>">
+  <style>
+    .policy { padding: 80px 0; }
+    .policy h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .policy .updated { font-size: 14px; color: var(--text-muted); margin-bottom: 48px; }
+    .policy h2 { font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 12px; }
+    .policy h3 { font-size: 17px; font-weight: 600; margin-top: 24px; margin-bottom: 8px; }
+    .policy p, .policy li { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
+    .policy ul, .policy ol { padding-left: 24px; margin-bottom: 16px; }
+    .policy a { color: var(--primary); text-decoration: none; }
+    .policy a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 32px; font-size: 14px; color: var(--text-muted); text-decoration: none; }
+    .back-link:hover { color: var(--text); }
+    .policy .highlight {
+      background: rgba(124, 58, 237, 0.1);
+      border-left: 3px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 16px 0;
+    }
+    .policy table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .policy th, .policy td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .policy th {
+      color: var(--text);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="policy">
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Tillbaka till startsidan</a>
+      <h1>Radera dina uppgifter</h1>
+      <p class="updated">Senast uppdaterad: 1 maj 2026</p>
+
+      <p>
+        DS Dynamics utvecklas och drivs av <strong>itfokus Sweden AB</strong>. Denna sida förklarar
+        hur du raderar dina uppgifter från appen och vilka uppgifter som finns kvar i eventuella
+        tredjepartstjänster.
+      </p>
+
+      <div class="highlight">
+        <p style="margin: 0;">
+          <strong>Sammanfattning:</strong> Eftersom DS Dynamics är en lokal-first peer-to-peer-app
+          ligger nästan all din data redan endast på din enhet. Du raderar den genom att avsluta
+          din relation i appen och/eller avinstallera appen. Det finns inga konton hos oss att
+          radera.
+        </p>
+      </div>
+
+      <h2>1. Vilka uppgifter har vi om dig?</h2>
+
+      <p>
+        DS Dynamics är designat så att <strong>vi (itfokus Sweden AB) inte har tillgång till din
+        personliga data</strong>. All relationsdata, regler, uppgifter, check-ins, samtycke,
+        platsdata och meddelanden lagras krypterat på din enhet (AES-256) och utbyts end-to-end
+        krypterat (Signal Protocol) direkt mellan dig och din partner.
+      </p>
+
+      <p>
+        Vår relay-server (hostad inom EU på Fly.io) ser endast krypterade meddelanden i transit
+        och loggar inget om innehåll, IP-adresser eller metadata.
+      </p>
+
+      <p>De enda uppgifter som finns i tredjepartstjänster är:</p>
+
+      <table>
+        <thead>
+          <tr><th>Tjänst</th><th>Uppgifter</th><th>Lagringstid</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RevenueCat (prenumerationshantering)</td>
+            <td>Anonymiserat användar-ID, prenumerationsstatus, köphistorik</td>
+            <td>Så länge prenumerationen är aktiv + tills radering begärs</td>
+          </tr>
+          <tr>
+            <td>Google Play Billing</td>
+            <td>Köpdata kopplad till ditt Google-konto</td>
+            <td>Hanteras av Google enligt deras policy</td>
+          </tr>
+          <tr>
+            <td>Firebase Cloud Messaging (push-notiser)</td>
+            <td>Anonymt push-token (innehåller ingen personlig info)</td>
+            <td>Tills appen avinstalleras</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>2. Så här raderar du dina uppgifter</h2>
+
+      <h3>Steg 1 — Radera lokal data och din relation</h3>
+      <ol>
+        <li>Öppna DS Dynamics på din enhet</li>
+        <li>Gå till <strong>Inställningar</strong> &rarr; <strong>Säkerhet</strong></li>
+        <li>Välj <strong>Avsluta relation</strong> — detta raderar all relationsdata på din enhet</li>
+        <li>Be din partner att också avsluta relationen i sin app — detta raderar deras kopia</li>
+      </ol>
+
+      <h3>Steg 2 — Avinstallera appen</h3>
+      <p>
+        När du avinstallerar DS Dynamics raderas all kvarvarande lokal data automatiskt
+        (krypterad SQLite-databas, kryptografiska nycklar i Secure Store, cachefiler).
+      </p>
+
+      <h3>Steg 3 — Begär radering hos tredjepartstjänster (frivilligt)</h3>
+
+      <p><strong>RevenueCat (prenumerationsdata):</strong></p>
+      <p>
+        Om du har haft en prenumeration och vill radera dina RevenueCat-uppgifter,
+        mejla oss på <a href="mailto:privacy@itfokus.se">privacy@itfokus.se</a> så
+        begär vi radering åt dig. Ange ditt RevenueCat-användar-ID om du vet det,
+        annars hjälper vi dig hitta det. Vi svarar inom 30 dagar.
+      </p>
+
+      <p><strong>Google Play Billing:</strong></p>
+      <p>
+        Köpdata hos Google hanteras direkt av Google.
+        Se <a href="https://support.google.com/googleplay/answer/2476659" target="_blank" rel="noopener">Google Play-hjälpen</a>
+        för information om hur du raderar din Google-data.
+      </p>
+
+      <h2>3. Vad raderas och vad sparas?</h2>
+
+      <table>
+        <thead>
+          <tr><th>Uppgift</th><th>Raderas vid avinstallation?</th><th>Eventuell kvarvarande lagring</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Profil, regler, uppgifter, check-ins, samtycke, lifelogg</td>
+            <td>Ja, omedelbart</td>
+            <td>Ingen — lagrades aldrig på server</td>
+          </tr>
+          <tr>
+            <td>Bilder (task-bevis)</td>
+            <td>Ja, omedelbart</td>
+            <td>Ingen</td>
+          </tr>
+          <tr>
+            <td>Platsdata</td>
+            <td>Ja, omedelbart</td>
+            <td>Ingen — lagrades aldrig på server</td>
+          </tr>
+          <tr>
+            <td>Krypteringsnycklar</td>
+            <td>Ja, omedelbart</td>
+            <td>Ingen</td>
+          </tr>
+          <tr>
+            <td>Prenumerationsdata (RevenueCat)</td>
+            <td>Nej</td>
+            <td>Tills radering begärs via privacy@itfokus.se</td>
+          </tr>
+          <tr>
+            <td>Push-token (FCM)</td>
+            <td>Ja, vid avinstallation</td>
+            <td>Ingen</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Begär radering utan att avinstallera</h2>
+
+      <p>
+        Om du vill radera enskilda uppgifter (t.ex. enstaka check-ins, tasks eller bilder)
+        kan du göra det direkt i appen via respektive vy &rarr; lång-tryck eller meny &rarr;
+        <strong>Radera</strong>.
+      </p>
+
+      <p>
+        Eftersom appen är peer-to-peer raderas data endast på din enhet — be din partner
+        att också radera motsvarande data i sin app.
+      </p>
+
+      <h2>5. Kontakt</h2>
+
+      <p>
+        Har du frågor om radering eller dataskydd, kontakta oss:
+      </p>
+
+      <p>
+        <strong>itfokus Sweden AB</strong><br>
+        E-post: <a href="mailto:privacy@itfokus.se">privacy@itfokus.se</a><br>
+        Vi svarar inom 30 dagar.
+      </p>
+
+      <p>
+        Du kan även lämna klagomål till Integritetsskyddsmyndigheten (IMY):
+        <a href="https://www.imy.se" target="_blank" rel="noopener">imy.se</a>.
+      </p>
+
+      <p style="margin-top: 48px;">
+        <a href="privacy.html">&rarr; Läs vår fullständiga integritetspolicy</a>
+      </p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="footer-sub">itfokus Sweden AB</p>
+    </div>
+  </footer>
+
+</body>
+</html>
